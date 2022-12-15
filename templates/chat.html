@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--自适应屏幕大小-->
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT临时体验卡</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>ChatGPT</h2>
+        <div>注意： 接口返回可能比较慢（服务在国外，并且OpenAI返回速度也比较慢），提交后需要等待处理完成，请勿重复提交！！！</div>
+        <div>~接口返回有长度限制~</div>
+        <hr />
+        <div>有问题请私聊Alliot</div>
+        {% if message %} {{ message }} {% endif %}
+        <form method="post" onsubmit="submit.disabled=true">
+            <textarea style="width:80%;" name="question" placeholder="点击这里输入问题" rows="11" id="form"></textarea>
+            <input type="submit" value="提交" id="submit" />
+        </form>
+        <div id="loading" style="display:none; color:red"><b>后端正在处理，请稍等...</b></div>
+        {% if question %}
+        <div style="text-align: left"><b>Human:</b>
+            <pre id="question">{{ question }}</pre>
+        </div>
+        <hr />
+        <div style="text-align: left"><b>AI:</b>
+            <pre style="text-align:left; white-space: pre-wrap;" id="res">{{ res }}</pre>
+        </div>
+
+        {% endif %}
+
+
+    </div>
+@media (prefers-color-scheme: dark) {
+    body {
+    	background: black;
+    	color: white;
+    }
+}
+</body>
+
+<script>
+    let loading = document.getElementById('loading');
+    let form = document.querySelector('form');
+
+    form.addEventListener('submit', () => {
+        loading.style.display = 'block';
+    });
+
+</script>
+
+</html>
