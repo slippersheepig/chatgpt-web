@@ -85,10 +85,10 @@ services:
     volumes:
       - ./chat.html:/chatgpt-web/templates/chat.html
     ports:
-      - "8888:80"
+      - "8888:80" #80为容器内部端口，8888为外部映射端口，可自行更改
     restart: always
 ```
 - 输入`docker-compose up -d`即启动成功
 ## 注意事项
-- 访问地址为http://ip:8888/chat
+- 访问地址为http://ip:port/chat
 - 修改`chat.html`文件后，需要docker restart webchat才能生效
