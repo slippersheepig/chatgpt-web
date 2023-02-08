@@ -86,7 +86,7 @@ services:
     volumes:
       - ./chat.html:/chatgpt-web/templates/chat.html
     ports:
-      - "8888:80" #80为容器内部端口，8888为外部映射端口，可自行更改
+      - "8888:80" #80为容器内部端口，不可更改；8888为外部映射端口，可自行更改
     restart: always
 ```
 - 输入`docker-compose up -d`即启动成功
