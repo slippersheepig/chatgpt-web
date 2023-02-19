@@ -8,11 +8,11 @@ def get_completion(question):
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=f"{question}\n",
-            temperature=0.9,
+            temperature=0.8,
             max_tokens=2048,
             top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0.6,
+            frequency_penalty=0.4,
+            presence_penalty=0.3,
             stop=None
         )
     except Exception as e:
