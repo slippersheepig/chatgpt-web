@@ -1,8 +1,5 @@
-> **Warning**
+> 感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用
 
-> 我自己的API KEY免费限额已经用光了
-
-请访问https://chat.sheepig.top 使用ChatGPT网页版
 # chatgpt-web
 ### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
 > 该版本基于OPENAI API KEY开发，想使用`ChatGPT`的请访问[chatgpt-html](https://github.com/slippersheepig/chatgpt-html)
@@ -91,7 +88,7 @@ services:
     volumes:
       - ./chat.html:/chatgpt-web/templates/chat.html
     ports:
-      - "8888:80" #80为容器内部端口，不可更改；8888为外部映射端口，可自行更改
+      - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
     restart: always
 ```
 - 输入`docker-compose up -d`即启动成功
