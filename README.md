@@ -78,7 +78,6 @@
 ```
 - 新建`docker-compose.yml`配置文件，粘贴以下内容并保存，放在与`chat.html`文件相同的目录下
 ```bash
-version: '3'
 services:
   chatgpt:
     image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
