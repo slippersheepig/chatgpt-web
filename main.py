@@ -21,11 +21,11 @@ def generate_response(prompt):
         return e
     return response["choices"][0].text
 
-@server.route("/")
+@server.route("/chat")
 def home():
     return render_template("chat.html")
 
-@server.route("/get")
+@server.route("/chat/get")
 def get_bot_response():
     user_text = request.args.get('msg')
     return str(generate_response(user_text))
