@@ -38,4 +38,4 @@ def get_request_json():
     return render_template('chat.html', question=0)
 
 if __name__ == '__main__':
-    server.run(debug=True, host='0.0.0.0', port=80)
+    server.run(debug=False, host='0.0.0.0', port=8088)
