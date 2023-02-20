@@ -225,7 +225,7 @@ body {
                 </div>
                 <div class="title">Fake ChatGPT</div>
             </div>
-            <div id="loading" style="display:none; color:red"><b>后端正在处理，请稍等，切勿重复提交<br>如出现空白回复，则说明当前使用人数过多，请稍后再试</b></div>
+            <div id="loading" style="display:none; color:red"><b>后端正在处理，请稍等，切勿重复提交</b></div>
             <ul class="messages">
             <div style="text-align: left; color: green"><pre style="white-space: pre-wrap; word-wrap:break-word" id="chatlog"></pre></div>
             </ul>
@@ -252,7 +252,7 @@ body {
           // Append the chatbot's response to the chatlog
           var chatlog = document.getElementById("chatlog");
           var response = document.createElement("div");
-          response.innerHTML = "🤔 " + message + "<br>🤖 " + xhr.responseText + "<br><br>";
+          response.innerHTML = "🤔<br>" + message + "<br>🤖<br>" + xhr.responseText + "<br><br>";
           chatlog.appendChild(response);
           // Scroll the chatlog to the bottom
           chatlog.scrollTop = chatlog.scrollHeight;
