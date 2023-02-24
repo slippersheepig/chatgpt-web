@@ -1,7 +1,7 @@
 # Update
  - 2023.2.20 `支持markdown语法`
  - 2023.2.19 `重构关键代码，内置本人使用的UI，支持查看对话记录`
-> ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了
+> ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了，请访问https://chat.sheepig.top 使用真ChatGPT版本
 
 # chatgpt-web
 ### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
