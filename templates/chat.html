@@ -253,7 +253,7 @@ body {
           // Append the chatbot's response to the chatlog
           var chatlog = document.getElementById("chatlog");
           var response = document.createElement("div");
-          response.innerHTML = "🤔<br>" + message + "<br>🤖" + marked.parse(xhr.responseText.replace(/\r\n/g, ""));
+          response.innerHTML = "🤔<br>" + message + "<br>🤖" + marked.parse(xhr.responseText);
           chatlog.appendChild(response);
           // Scroll the chatlog to the bottom
           chatlog.scrollTop = chatlog.scrollHeight;
