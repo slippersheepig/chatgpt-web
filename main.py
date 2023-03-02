@@ -1,25 +1,18 @@
-import openai
+from pathlib import Path
+from dotenv import dotenv_values
+from revChatGPT.V3 import Chatbot
 from flask import Flask, request, render_template, redirect
 
 server = Flask(__name__)
 
-def generate_response(prompt):
-    try:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.7,
-            max_tokens=2048,
-            top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0,
-            stop=None
-        )
-    except Exception as e:
+parent_dir = Path(__file__).resolve().parent
+config = dotenv_values(f"{parent_dir}/.env")
 
-        print(e)
-        return e
-    return response["choices"][0]["message"]["content"]
+chatbot = Chatbot(api_key=config["OPENAI_API_KEY"])
+
+def generate_response(prompt):
+    response = chatbot.ask(prompt)
+    return response
 
 @server.route("/chat")
 def home():
