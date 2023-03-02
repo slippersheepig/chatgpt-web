@@ -5,14 +5,14 @@ server = Flask(__name__)
 
 def generate_response(prompt):
     try:
-        response = openai.Completion.create(
-            model="text-davinci-003",
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
             prompt=prompt,
-            temperature=0.8,
+            temperature=0.9,
             max_tokens=2048,
             top_p=1,
-            frequency_penalty=0.4,
-            presence_penalty=0.3,
+            frequency_penalty=0,
+            presence_penalty=0,
             stop=None
         )
     except Exception as e:
