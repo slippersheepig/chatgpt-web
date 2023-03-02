@@ -1,9 +1,9 @@
 # Update
+- 2023.3.2 切换到官方ChatGPT API（注：API收费）
 + 2023.2.28 关于OPENAI允许问题的最大长度
   + 根据OPENAI官方[问答](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)"Depending on the [model](https://platform.openai.com/docs/models/gpt-3) used, requests can use up to 4097 tokens shared between prompt and completion. If your prompt is 4000 tokens, your completion can be 97 tokens at most"，问题和回答加起来的总长度无法超过4097个token，如果你不清楚自己问题的长度，可以使用[官方计数器](https://platform.openai.com/tokenizer)
 - 2023.2.20 `支持markdown语法`
-- 2023.2.19 `重构关键代码，内置本人使用的UI，支持查看对话记录`
-> ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了，请访问https://chat.sheepig.top 使用真ChatGPT版本
+> ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了，请访问https://chat.sheepig.top 使用网页代理ChatGPT版本
 
 # chatgpt-web
 ### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
