@@ -24,7 +24,7 @@ services:
     environment:
       - OPENAI_API_KEY=前面你获取到的OpenAI API KEY
 #    volumes:
-#      - ./chat.html:/chatgpt-web/templates/chat.html #默认内置我的UI，如需替换自用网页请取消注释
+#      - ./chat.html:/chatgpt-web/templates/chat.html #默认内置我的UI，如需替换自用网页请取消注释，需与docker-compose.yml文件在同一目录
     ports:
       - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
     restart: always
