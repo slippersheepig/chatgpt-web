@@ -1,4 +1,5 @@
 # Update
+- 2023.3.3 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
 - 2023.3.2 切换到官方ChatGPT API（注：API收费）
 + 2023.2.28 关于OPENAI允许问题的最大长度
   + 根据OPENAI官方[问答](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)"Depending on the [model](https://platform.openai.com/docs/models/gpt-3) used, requests can use up to 4097 tokens shared between prompt and completion. If your prompt is 4000 tokens, your completion can be 97 tokens at most"，问题和回答加起来的总长度无法超过4097个token，如果你不清楚自己问题的长度，可以使用[官方计数器](https://platform.openai.com/tokenizer)
@@ -15,15 +16,19 @@
 #### 从源码配置
 - 请参考原作者[github](https://github.com/AlliotTech/chatgpt-web)
 #### 使用Docker Compose
+> 以下所有文件放同一目录
+- 新建`.env`配置文件，粘贴以下内容并保存
+```bash
+OPENAI_API_KEY="前面你获取到的OpenAI API KEY"
+```
 - 新建`docker-compose.yml`配置文件，粘贴以下内容并保存
 ```bash
 services:
   chatgpt:
     image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
     container_name: webchat
-    environment:
-      - OPENAI_API_KEY=前面你获取到的OpenAI API KEY
-#    volumes:
+    volumes:
+      - ./.env:/chatgpt-web/.env
 #      - ./chat.html:/chatgpt-web/templates/chat.html #默认内置我的UI，如需替换自用网页请取消注释，需与docker-compose.yml文件在同一目录
     ports:
       - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
