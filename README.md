@@ -32,3 +32,4 @@ services:
 - 输入`docker-compose up -d`即启动成功
 ## 注意事项
 - 访问地址为http://ip:port/chat
+- 修改`chat.html`文件后，需要docker restart webchat才能生效
