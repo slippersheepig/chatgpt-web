@@ -1,5 +1,6 @@
 # Update
-- 2023.3.3 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
+- 2023.3.3-2 十分感谢[minguncle](https://github.com/minguncle)提交PR，现支持按回车发送问题请求，按shift+回车可换行输入文本
+- 2023.3.3-1 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
 - 2023.3.2 切换到官方ChatGPT API（注：API收费）
 + 2023.2.28 关于OPENAI允许问题的最大长度
   + 根据OPENAI官方[问答](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)"Depending on the [model](https://platform.openai.com/docs/models/gpt-3) used, requests can use up to 4097 tokens shared between prompt and completion. If your prompt is 4000 tokens, your completion can be 97 tokens at most"，问题和回答加起来的总长度无法超过4097个token，如果你不清楚自己问题的长度，可以使用[官方计数器](https://platform.openai.com/tokenizer)
