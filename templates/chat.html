@@ -35,6 +35,15 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
+    // 加入回车提交支持，shift+回车换行
+    var input = document.getElementById("chatinput");
+    input.addEventListener("keydown", function (event) {
+        if (event.keyCode === 13 && !event.shiftKey) {
+            event.preventDefault();
+            document.getElementById("sendbutton").click();
+        }
+    });
+
     // Add your JavaScript here
     document.getElementById("sendbutton").addEventListener("click", function () {
         let loading = document.getElementById('loading');
