@@ -8,7 +8,7 @@
 > ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了，请访问https://chat.sheepig.top 使用网页代理ChatGPT版本
 
 # chatgpt-web
-### 使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及查看对话记录）（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
+### 使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及连续对话）（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
 > 该版本基于OPENAI ChatGPT API开发（付费），想使用`ChatGPT`（免费）的请访问[chatgpt-html](https://github.com/slippersheepig/chatgpt-html)
 ## 部署
 ### 获取OpenAI API KEY
