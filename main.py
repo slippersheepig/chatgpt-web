@@ -12,8 +12,11 @@ chatbot = Chatbot(api_key=config["OPENAI_API_KEY"])
 
 
 def generate_response(prompt):
-    response = chatbot.ask(prompt)
-    return response
+    try:
+        response = chatbot.ask(prompt)
+        return response
+    except Exception as e:
+        return e
 
 
 @server.route("/chat")
