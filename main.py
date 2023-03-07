@@ -21,6 +21,7 @@ def generate_response(prompt):
 
 @server.route("/chat")
 def home():
+    chatbot.reset_chat()
     return render_template("chat.html")
 
 
