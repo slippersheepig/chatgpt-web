@@ -1,6 +1,6 @@
 # Update
 - 2023.3.12 进入稳定期，降低更新频率
-  + 出于玩玩bing的chatgpt心态，按[waylaidwanderer](https://github.com/waylaidwanderer/PandoraAI)搞了一套[测试站](https://ms.sheepig.top/)，由于功能比较丰富，打开时加载稍慢。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
+  + 出于玩玩bing的chatgpt心态，按[waylaidwanderer](https://github.com/waylaidwanderer/PandoraAI)搞了一套[测试站](https://ms.sheepig.top/)（如果出现500报错请用无痕模式再打开），由于功能比较丰富，打开时加载稍慢。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
 - 2023.3.7 小改代码，实现多用户独立会话互不干扰，并且不影响每个用户的连续对话（临时性方案，等作者重写核心代码）
 - 2023.3.3-2 十分感谢[minguncle](https://github.com/minguncle)提交PR，现支持按回车发送问题请求，按shift+回车可换行输入文本
 - 2023.3.3-1 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
