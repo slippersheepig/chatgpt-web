@@ -1,6 +1,7 @@
 # Update
 - 2023.3.12 进入稳定期，降低更新频率
-  + 出于玩玩bing的chatgpt心态，按[waylaidwanderer](https://github.com/waylaidwanderer/PandoraAI)搞了一套[测试站](https://ms.sheepig.top/)（需要先点击聊天框左边的图标切换模型，默认模型是API，我的KEY没额度了），由于功能比较丰富，打开时加载稍慢。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
+  + 出于玩玩bing的chatgpt心态，按[waylaidwanderer](https://github.com/waylaidwanderer/PandoraAI)搞了一套[测试站](https://ms.sheepig.top/)（需要先点击聊天框左边的图标切换模型，默认模型是API，我的KEY没额度了），`BingAI`就是GPT-4，`Sydney`是“破解”过的BingAI（没有每轮对话最多15次和每天对话最多150次的限制，但是智商差一点）。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
+![image](https://user-images.githubusercontent.com/58287293/225885666-ff56fb90-13ac-46a4-b685-d4188c3fee36.png)
 - 2023.3.7 小改代码，实现多用户独立会话互不干扰，并且不影响每个用户的连续对话（临时性方案，等作者重写核心代码）
 - 2023.3.3-2 十分感谢[minguncle](https://github.com/minguncle)提交PR，现支持按回车发送问题请求，按shift+回车可换行输入文本
 - 2023.3.3-1 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
