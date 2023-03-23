@@ -29,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/amd64, linux/arm64, linux/ppc64le, linux/s390x
+          platforms: linux/amd64, linux/arm64
           push: true
           tags: sheepgreen/chatgpt-web:latest
