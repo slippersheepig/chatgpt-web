@@ -1,4 +1,5 @@
 # Update
+- 2023.3.23 镜像分支合并，不再用tag区分
 - 2023.3.12 进入稳定期，降低更新频率
   + 出于玩玩bing的chatgpt心态，按[danny-avila](https://github.com/danny-avila/chatgpt-clone)搞了一套[测试站](https://ms.sheepig.top)（需要先点击聊天框左边的图标切换模型，默认模型是API，我的KEY没额度了），`BingAI`就是GPT-4，`Sydney`是“破解”过的BingAI（没有每轮对话最多15次和每天对话最多150次的限制，但是智商差一点）。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
 ![image](https://user-images.githubusercontent.com/58287293/225885666-ff56fb90-13ac-46a4-b685-d4188c3fee36.png)
@@ -30,7 +31,7 @@ OPENAI_API_KEY="前面你获取到的OpenAI API KEY"
 ```bash
 services:
   chatgpt:
-    image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
+    image: sheepgreen/chatgpt-web
     container_name: webchat
     volumes:
       - ./.env:/chatgpt-web/.env
