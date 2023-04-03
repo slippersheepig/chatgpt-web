@@ -1,23 +1,12 @@
-# Update
-- 2023.3.23 镜像分支合并，不再用tag区分
-- 2023.3.12 进入稳定期，降低更新频率
-  + 出于玩玩bing的chatgpt心态，按[danny-avila](https://github.com/danny-avila/chatgpt-clone)搞了一套[测试站](https://ms.sheepig.top)（需要先点击聊天框左边的图标切换模型，默认模型是API，我的KEY没额度了），`BingAI`就是GPT-4，`Sydney`是“破解”过的BingAI（没有每轮对话最多15次和每天对话最多150次的限制，但是智商差一点）。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
-![image](https://user-images.githubusercontent.com/58287293/225885666-ff56fb90-13ac-46a4-b685-d4188c3fee36.png)
-- 2023.3.7 小改代码，实现多用户独立会话互不干扰，并且不影响每个用户的连续对话（临时性方案，等作者重写核心代码）
-- 2023.3.3-2 十分感谢[minguncle](https://github.com/minguncle)提交PR，现支持按回车发送问题请求，按shift+回车可换行输入文本
-- 2023.3.3-1 切换[acheong08](https://github.com/acheong08/ChatGPT)的V3对接官方API，实现上下文关联
-- 2023.3.2 切换到官方ChatGPT API（注：API收费）
-- 2023.2.28 关于OPENAI允许问题的最大长度
-  + 根据OPENAI官方[问答](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)"Depending on the [model](https://platform.openai.com/docs/models/gpt-3) used, requests can use up to 4097 tokens shared between prompt and completion. If your prompt is 4000 tokens, your completion can be 97 tokens at most"，问题和回答加起来的总长度无法超过4097个token，如果你不清楚自己问题的长度，可以使用[官方计数器](https://platform.openai.com/tokenizer)
-- 2023.2.20 `支持markdown语法`
-> ~~感谢某爱心人士捐助，https://gpt.sheepig.top/chat 已恢复使用~~再次被干爆，没次数了，请访问 https://chat.sheepig.top 使用网页代理ChatGPT版本
-
 # chatgpt-web
-### 使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及连续对话）（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
+### 使用官方ChatGPT API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
 > 该版本基于OPENAI ChatGPT API开发（付费），想使用`ChatGPT`（免费）的请访问[chatgpt-html](https://github.com/slippersheepig/chatgpt-html)
+## 特性
+- 文件结构简单，主要面向小白用户
+- 功能不多，但核心的连续对话、多用户会话隔离、markdown格式输出都具备
 ## 部署
 ### 获取OpenAI API KEY
-- 建议参考[此教程](https://blog.csdn.net/hekaiyou/article/details/128303729)获取
+- 建议官方渠道获取https://platform.openai.com/account/api-keys
 ### 配置
 #### 从源码配置
 - 请参考原作者[github](https://github.com/AlliotTech/chatgpt-web)
@@ -44,3 +33,6 @@ services:
 ## 注意事项
 - 访问地址为http://ip:port/chat
 - 修改`chat.html`文件后，需要docker restart webchat才能生效
+## 其他相关
+- 出于玩玩bing的chatgpt心态，按[danny-avila](https://github.com/danny-avila/chatgpt-clone)搞了一套[测试站](https://ms.sheepig.top)（需要先点击聊天框左边的图标切换模型，默认模型是API，我的KEY没额度了），`BingAI`就是GPT-4，`Sydney`是“破解”过的BingAI（没有每轮对话最多15次和每天对话最多150次的限制，但是智商差一点）。另外此项目代码也有bug需要完善（如果你去体验会发现的），不做详细介绍。
+![image](https://user-images.githubusercontent.com/58287293/225885666-ff56fb90-13ac-46a4-b685-d4188c3fee36.png#pic_center)
