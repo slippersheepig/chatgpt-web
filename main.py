@@ -1,7 +1,7 @@
 from pathlib import Path
 from dotenv import dotenv_values
 from revChatGPT.V3 import Chatbot
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template
 
 server = Flask(__name__)
 
