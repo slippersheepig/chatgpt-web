@@ -78,22 +78,25 @@ body {
   border-radius: 3px;
   resize: none;
   font-size: 16px;
-  outline: none;
+  height: 40px; /* 设置输入框的高度 */
+  vertical-align: middle; /* 垂直居中 */
 }
 
 .bottom_wrapper button {
   width: 60px;
   height: 40px;
+  margin-left: 10px; /* 增加左边距 */
+  font-size: 16px;
   border: none;
-  background-color: #4da7db;
-  color: #fff;
   border-radius: 3px;
+  background-color: #4CAF50;
+  color: white;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  vertical-align: middle; /* 垂直居中 */
 }
 
 .bottom_wrapper button:hover {
-  background-color: #42a1d8;
+  background-color: #3e8e41;
 }
 
 .bottom_wrapper button:focus {
