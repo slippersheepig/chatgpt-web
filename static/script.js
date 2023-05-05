@@ -18,7 +18,6 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         chatlog.appendChild(response);
         response.scrollIntoView({ behavior: 'smooth', block: 'end' });
     } else {
-        response.innerHTML = "🤖<br>思考中，请稍后...";
         // Clear the input field
         document.getElementById("chatinput").value = "";
         // Send the message to the chatbot
@@ -27,6 +26,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         xhr.send();
         xhr.onload = function () {
             // Append the chatbot's response to the chatlog
+            response.innerHTML = "🤖<br>思考中，请稍后...";
             response.innerHTML = "🤔<br>" + message + "<br>🤖" + marked.parse(xhr.responseText);
             chatlog.appendChild(response);
             response.scrollIntoView({ behavior: 'smooth', block: 'end' });
