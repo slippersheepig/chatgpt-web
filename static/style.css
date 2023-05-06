@@ -102,3 +102,26 @@ body {
 .bottom_wrapper button:focus {
   outline: none;
 }
+
+/* 新增一个typing类，用于显示动画效果 */
+.typing {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  position: relative;
+  animation: typing 1.5s infinite;
+}
+
+/* 定义typing动画，让小圆点在水平方向上移动 */
+@keyframes typing {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 20px);
+  }
+  100% {
+    left: 0;
+  }
+}
