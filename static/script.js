@@ -24,9 +24,14 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/chat/get?msg=" + message);
         xhr.send();
+        // Display "typing" message while the bot is thinking
+        var typingMessage = document.createElement("div");
+        typingMessage.innerHTML = "🤖<br>正在输入...";
+        chatlog.appendChild(typingMessage);
+        typingMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
         xhr.onload = function () {
             // Append the chatbot's response to the chatlog
-            response.innerHTML = "🤖<br>思考中，请稍后...";
+            chatlog.removeChild(typingMessage);
             response.innerHTML = "🤔<br>" + message + "<br>🤖" + marked.parse(xhr.responseText);
             chatlog.appendChild(response);
             response.scrollIntoView({ behavior: 'smooth', block: 'end' });
