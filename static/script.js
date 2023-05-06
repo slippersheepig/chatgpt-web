@@ -26,7 +26,11 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         xhr.send();
         // Display "typing" message while the bot is thinking
         var typingMessage = document.createElement("div");
-        typingMessage.innerHTML = "🤖<br>正在输入...";
+        typingMessage.innerHTML = "🤖<br>";
+        // 新增一个小圆点元素，添加typing类
+        var dot = document.createElement("div");
+        dot.classList.add("typing");
+        typingMessage.appendChild(dot);
         chatlog.appendChild(typingMessage);
         typingMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
         xhr.onload = function () {
