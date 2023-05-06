@@ -11,14 +11,8 @@
 </head>
 
 <body>
-<div align="center">
     <div class="chat_window">
         <div class="top_menu">
-            <div class="buttons">
-                <div class="button close"></div>
-                <div class="button minimize"></div>
-                <div class="button maximize"></div>
-            </div>
             <div class="title">ChatGPT API</div>
         </div>
         <ul class="messages">
@@ -27,11 +21,10 @@
             </div>
         </ul>
         <div class="bottom_wrapper clearfix">
-            <textarea class="message_input_wrapper" placeholder="点击这里输入问题，回车提交，按shift+回车换行" id="chatinput"></textarea>
+            <textarea class="message_input_wrapper" placeholder="点击这里输入问题，回车提交，按shift+回车换行" id="chatinput" rows="3"></textarea>
             <button class="send_message" id="sendbutton">提交</button>
         </div>
     </div>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
