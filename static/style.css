@@ -70,7 +70,7 @@ body {
 }
 
 .bottom_wrapper textarea {
-  width: calc(100% - 80px);;
+  width: calc(100% - 80px);
   border: none;
   padding: 10px;
   border-radius: 3px;
