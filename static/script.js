@@ -19,6 +19,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         response.classList.add("animate__animated", "animate__lightSpeedInLeft");
         chatlog.appendChild(response);
         response.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        window.scrollTo(0, document.body.scrollHeight);
     } else {
         // Clear the input field
         document.getElementById("chatinput").value = "";
@@ -26,7 +27,9 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/chat/get?msg=" + message);
         xhr.send();
+        // Display "typing" message while the bot is thinking
         var typingMessage = document.createElement("div");
+        // typingMessage.innerHTML = "🤖<br>";
         // 新增一个小圆点元素，添加typing类
         var dot = document.createElement("div");
         dot.classList.add("typing");
@@ -41,6 +44,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
             response.classList.add("animate__animated", "animate__lightSpeedInLeft");
             chatlog.appendChild(response);
             response.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            window.scrollTo(0, document.body.scrollHeight);
         }
     }
 });
