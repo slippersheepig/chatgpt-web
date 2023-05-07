@@ -20,7 +20,6 @@ body {
   position: absolute;
   width: calc(100% - 20px);
   max-width: 800px;
-  height: 500px;
   border-radius: 10px;
   background-color: #f8f8f8;
   left: 50%;
@@ -47,9 +46,8 @@ body {
   position: relative;
   list-style: none;
   padding: 20px 10px 0;
-  margin: 0;
-  height: 360px;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .messages div {
@@ -72,7 +70,7 @@ body {
 }
 
 .bottom_wrapper textarea {
-  width: calc(100% - 80px);
+  width: calc(100% - 80px);;
   border: none;
   padding: 10px;
   border-radius: 3px;
