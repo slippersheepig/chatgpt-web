@@ -19,7 +19,6 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         response.classList.add("animate__animated", "animate__lightSpeedInLeft");
         chatlog.appendChild(response);
         response.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        window.scrollTo(0, document.body.scrollHeight);
     } else {
         // Clear the input field
         document.getElementById("chatinput").value = "";
@@ -43,7 +42,6 @@ document.getElementById("sendbutton").addEventListener("click", function () {
             response.classList.add("animate__animated", "animate__lightSpeedInLeft");
             chatlog.appendChild(response);
             response.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            window.scrollTo(0, document.body.scrollHeight);
         }
     }
 });
