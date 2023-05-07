@@ -16,7 +16,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
     if (message.length < 1) {
         response.innerHTML = "🤔<br>🤖<br>Message cannot be null\n问题不能为空";
         // 给response添加一个动画类
-        response.classList.add("animate__animated", "animate__bounceIn");
+        response.classList.add("animate__animated", "animate__lightSpeedInLeft");
         chatlog.appendChild(response);
         response.scrollIntoView({ behavior: 'smooth', block: 'end' });
     } else {
@@ -26,9 +26,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/chat/get?msg=" + message);
         xhr.send();
-        // Display "typing" message while the bot is thinking
         var typingMessage = document.createElement("div");
-        typingMessage.innerHTML = "🤖<br>";
         // 新增一个小圆点元素，添加typing类
         var dot = document.createElement("div");
         dot.classList.add("typing");
@@ -40,7 +38,7 @@ document.getElementById("sendbutton").addEventListener("click", function () {
             chatlog.removeChild(typingMessage);
             response.innerHTML = "🤔<br>" + message + "<br>🤖" + marked.parse(xhr.responseText);
             // 给response添加一个动画类
-            response.classList.add("animate__animated", "animate__bounceIn");
+            response.classList.add("animate__animated", "animate__lightSpeedInLeft");
             chatlog.appendChild(response);
             response.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
