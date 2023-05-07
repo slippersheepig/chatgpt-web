@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 
 <!--自适应屏幕大小-->
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及查看对话记录）"/>
+<meta name="description" content="使用官方ChatGPT API实现简单HTML网页版在线聊天"/>
 <head>
     <meta charset="UTF-8">
     <title>OpenAI</title>
@@ -14,11 +15,11 @@
 
 <body>
 <div align="center">
-    <div class="chat_window">
+    <div class="chat_window" style="height: 100%">
         <div class="top_menu">
             <div class="title">ChatGPT API</div>
         </div>
-        <ul class="messages">
+        <ul class="messages" style="height: calc(100% - 140px)">
             <div style="text-align: left; color: green">
                 <pre style="white-space: pre-wrap; word-wrap:break-word" id="chatlog"></pre>
             </div>
