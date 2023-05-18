@@ -111,6 +111,45 @@ body {
   animation: typing 1.5s infinite;
 }
 
+.dark {
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chat_window {
+    background-color: #333;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .top_menu {
+    background-color: #222;
+    box-shadow: 0 1px 30px rgba(255, 255, 255, 0.1);
+  }
+
+  .top_menu .title {
+    color: #ccc;
+  }
+
+  .bottom_wrapper {
+    background-color: #222;
+    box-shadow: 0 1px 30px;
+    rgba(255, 255, 255, 0.1);
+  }
+
+  .bottom_wrapper textarea {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .bottom_wrapper button {
+    background-color: #4CAF50;
+  }
+
+  .bottom_wrapper button:hover {
+    background-color: #3e8e41;
+  }
+}
+
 /* 定义typing动画，让小圆点在水平方向上移动 */
 @keyframes typing {
   0% {
