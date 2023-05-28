@@ -1,4 +1,4 @@
-revchatgpt
+revchatgpt==5.2.0
 python-dotenv
 flask
 gunicorn
