@@ -1,5 +1,4 @@
-FROM python:alpine
-RUN apk add --no-cache build-base libffi-dev
+FROM python:slim
 WORKDIR /chatgpt-web
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
